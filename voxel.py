@@ -43,7 +43,7 @@ def LineMatrix(path):
 N1 = 40
 N2 = 40
 N3 = 40
-ma = np.zeros([N1, N2, N3])
+#ma = np.zeros([N1, N2, N3])
 rlt_arr = []
 file_num =1
 for i in range (file_num):
@@ -65,9 +65,9 @@ colors = np.empty(ma.shape, dtype=object)
 
 fig = plt.figure()
 ax = fig.gca(projection='3d')
-#ax.set_aspect('equal')
+ax.set_aspect('equal')
 
 ax.voxels(ma,  edgecolor="k")
 
-print(ma)
+#print(ma)
 plt.show()
