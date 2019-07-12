@@ -176,6 +176,20 @@ N3 = 40
 ma = np.zeros([N1, N2, N3])
 rlt_arr = []
 file_num =1
+
+xAngle = 90
+xStep = 10
+
+yAngle = 90
+yStep = 10
+
+zAngle = 90
+zStep = 10
+
+plt.rcParams['animation.ffmpeg_path'] =r'ffmpeg\bin\ffmpeg.exe'
+
+Rotate2Video(xAngle,xStep,yAngle,yStep,zAngle,zStep)
+
 for i in range (file_num):
     arr = []
     real_path = path + str(i+1)+".txt"
@@ -201,17 +215,6 @@ plt.show()
 
 
 
-xAngle = 90
-xStep = 10
 
-yAngle = 90
-yStep = 10
-
-zAngle = 90
-zStep = 10
-
-plt.rcParams['animation.ffmpeg_path'] =r'ffmpeg\bin\ffmpeg.exe'
-
-Rotate2Video(xAngle,xStep,yAngle,yStep,zAngle,zStep)
 
 
