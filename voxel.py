@@ -46,7 +46,18 @@ N3 = 40
 ma = np.zeros([N1, N2, N3])
 rlt_arr = []
 file_num =1
+for i in range (file_num):
+    arr = []
+    real_path = path + str(i+1)+".txt"
+    arr = LineMatrix(real_path)
+    rlt_arr.append(arr)
 
+with open ( 'result.txt', 'w') as f:
+    for i in range ( 64000):
+        for j in range (file_num):
+            f.write("%f " % rlt_arr[j][i])
+        f.write('\n')
+f.close()
 
 colors = np.empty(ma.shape, dtype=object)
 #colors[ma[1]] = 'red'
